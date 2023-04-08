@@ -1,0 +1,10 @@
+<h1>All Documents </h1>
+<h1>Total Documents: {{docs | length}}</h1>
+
+{% for doc in docs %}
+	<div style="background-color: #264b5d; margin-bottom: 2rem; color:white;">
+		<p>Name: {{ doc.name }}</p>
+        <p>Link: {{ doc.file.url }}</p>
+        <p>Image: <img src="{{doc.file.url}}" width="150px"/></p>
+	</div>
+{% endfor %}
